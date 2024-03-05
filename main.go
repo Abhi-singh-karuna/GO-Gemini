@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Please enter your question those you ask with assistance :  ")
 	
 	fmt.Scanln(&yourQuestion)
-	cli := gemini.NewClient("AIzaSyD9G87j3-_kkhPW4ROB5VHLHetLx0HF6EQ")
+	cli := gemini.NewClient("API_TOKEN")
 	rst, err := cli.GenerateContent(models.GeminiPro,
 		models.NewGenerateContentRequest(
 			models.NewContent(models.RoleUser, models.NewTextPart(yourQuestion)),
